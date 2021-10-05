@@ -1,0 +1,108 @@
+@import "~bootstrap/scss/bootstrap";
+
+$bg-primary: white;
+$bg-secondary: #141418;
+$textPrimary: #b6b6b6;
+$textSecondary: #ececec;
+$border: rgba(17, 17, 26, 0.1);
+$topNavHeight: 3.5rem;
+
+:root {
+
+}
+
+body {
+
+}
+
+body::-webkit-scrollbar {
+
+}
+
+body::-webkit-scrollbar-track {
+
+}
+
+body::-webkit-slider-thumb {
+
+}
+
+.topnav {
+    transition: box-shadow ease 0.5s;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.topnav:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.task {
+    margin-left: 8vw;
+}
+
+.project {
+    margin-left: 4vw;
+}
+
+.nav-item {
+    min-width: 12vw;
+    margin: 0 1vw
+}
+
+.project p {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.task p {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.task-desc {
+    cursor: pointer;
+}
+
+.desc-saveBtn {
+    width: 20%;
+}
+
+.check {
+    cursor: pointer;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.card span {
+    flex: 0.03;
+    flex-basis: 0.1vw;
+}
+
+.card h5 {
+    flex: 1;
+}
+
+.card p {
+    flex-basis: 100%;
+}
+
+.card span, h5, p {
+    margin: 0;
+    cursor: pointer;
+}
+
+.card input {
+    flex-basis: 100%;
+}
+
+.dragging {
+    opacity: 0.5;
+}
