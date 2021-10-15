@@ -14,7 +14,7 @@ module.exports = {
         compress: true,
         port: 9000,
     },
-    mode: "development",
+    mode: "production",
     watch: true,
     module: {
         rules: [

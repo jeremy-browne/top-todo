@@ -12,7 +12,13 @@ $topNavHeight: 3.5rem;
 }
 
 body {
+    font-family: Helvetica, Arial, sans-serif;
+}
 
+input[type=text] {
+    width: 80%;
+    border-collapse: collapse;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 body::-webkit-scrollbar {
@@ -39,7 +45,12 @@ body::-webkit-slider-thumb {
 }
 
 .task {
-    margin-left: 8vw;
+    margin-left: 10rem;
+    margin-right: 20rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .project {
@@ -51,9 +62,8 @@ body::-webkit-slider-thumb {
     margin: 0 1vw
 }
 
-.project p {
-    padding-left: 0.5rem;
-    padding-top: 0.5rem;
+.task > h3 {
+    cursor: pointer;
 }
 
 .task p {
@@ -61,7 +71,7 @@ body::-webkit-slider-thumb {
     padding-top: 0.5rem;
 }
 
-.task-desc {
+.taskDescription {
     cursor: pointer;
 }
 
@@ -73,36 +83,95 @@ body::-webkit-slider-thumb {
     cursor: pointer;
 }
 
-.card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-
-.card span {
-    flex: 0.03;
-    flex-basis: 0.1vw;
-}
-
-.card h5 {
-    flex: 1;
-}
-
-.card p {
-    flex-basis: 100%;
-}
-
-.card span, h5, p {
-    margin: 0;
-    cursor: pointer;
-}
-
-.card input {
-    flex-basis: 100%;
-}
-
 .dragging {
     opacity: 0.5;
+}
+
+.projectSelector {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    overflow: hidden;
+    transition: all 0.1s ease;
+    background-color: #636363;
+    border: 2px solid #414040;
+    padding: 10px;
+}
+
+.projectSelector:hover {
+    color: #fff;
+    border-left: 5px solid rgb(0, 201, 0);
+    font-weight: 700;
+}
+
+.projectSelector:active {
+    transform: translate(1px, 4px);
+}
+
+.projectSelector:first-of-type {
+    margin-top: 20px;
+}
+
+.descriptionInput {
+    font-size: 16px;
+}
+
+.prioritySelector {
+    font-size: 16px;
+    margin-left: 10px;
+    height: 20px;
+}
+
+.dueDate {
+    font-size: 16px;
+    padding: 2px;
+    height: 20px;
+}
+
+.newProjectInput {
+    height: 30px;
+    font-size: 16px;
+}
+
+.controlWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar {
+    width: 15rem;
+    background-color: rgb(99, 99, 99);
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    text-align: center;
+}
+
+#sidebar button {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+#content {
+    margin-left: 15rem;
+}
+
+#titleContainer {
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+#projectControls button {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
+}
+
+#projectControls:hover button {
+    visibility: visible;
+    opacity: 1;
 }
